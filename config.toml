@@ -1,0 +1,29 @@
+# config.toml
+
+[system]
+poll_interval_seconds = 5
+max_crashes_before_cooldown = 3
+cooldown_duration_seconds = 600
+stable_uptime_threshold = 600
+
+[roblox_global]
+default_activity = "com.roblox.client.Activity"
+# Format intent dasar untuk private server
+base_intent_url = "roblox://placeId=123456789&linkCode=ABCDEFG"
+
+# Definisi masing-masing clone package
+[packages]
+    [packages."com.roblox.client"]
+    enabled = true
+    
+    [packages."com.roblox.client2"]
+    enabled = true
+    # Bisa override intent spesifik per package jika beda server
+    intent_url = "roblox://placeId=987654321&linkCode=XYZ"
+
+    [packages."com.roblox.client3"]
+    enabled = true
+    
+    [packages."com.roblox.client4"]
+    enabled = true
+
